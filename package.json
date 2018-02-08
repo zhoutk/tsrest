@@ -1,0 +1,32 @@
+{
+  "name": "tsrest",
+  "version": "0.1.0",
+  "description": "typescript build a rest ful api service.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha -r ts-node/register src/**/*.spec.ts --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhoutk/tsrest.git"
+  },
+  "keywords": [
+    "rest",
+    "node.js",
+    "typescript"
+  ],
+  "author": "zhoutk@189.cn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhoutk/tsrest/issues"
+  },
+  "homepage": "https://github.com/zhoutk/tsrest#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^2.2.48",
+    "@types/node": "^9.4.2",
+    "ts-node": "^4.1.0",
+    "typescript": "^2.7.1"
+  }
+}
