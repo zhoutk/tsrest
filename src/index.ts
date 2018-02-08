@@ -1,5 +1,9 @@
-import { User } from './user';
+import { IDao } from './DaoInterface';
+import { MysqlDao } from './MysqlDao';
 
-const user = new User('Jon', 'Snow')
+const dao: IDao = new MysqlDao();
 
-console.log(`I am ${user.getFullName()}`)
+dao.select('member', {username:'admin',realname:'admin'}).then((rs)=>{
+    console.dir(rs);
+})
+

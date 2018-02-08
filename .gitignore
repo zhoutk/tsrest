@@ -1,4 +1,5 @@
 dist/**
+**/configs.json
 # Logs
 logs
 *.log
