@@ -1,11 +1,5 @@
-class person {
-    constructor() {
+import { User } from './user';
 
-    }
+const user = new User('Jon', 'Snow')
 
-    public print() {
-        console.log('this is a person')
-    }
-}
-let p = new person();
-p.print();
+console.log(`I am ${user.getFullName()}`)
