@@ -1,6 +1,7 @@
 import {IDao} from './DaoInterface';
 import { createPool, createConnection } from 'mysql';
 const config = require('./configs.json').db_config;
+const GlobalConst = require('./globalConst');
 
 var options = {
     'host': config.db_host,
@@ -15,7 +16,7 @@ var options = {
     'bigNumberStrings': true
 }
 
-let pool = createPool(options);
+var pool = createPool(options);
 
 export class MysqlDao implements IDao {
     select(tablename: string, params: object, fields?: Array<string>): Promise<any>{
@@ -27,7 +28,7 @@ export class MysqlDao implements IDao {
             pool.getConnection(function(err, connection) {
                 if (err) {
                     reject({code:204,err:err.message})
-                    console.log(err.message)
+                    logger.debug(err.message)
                 } else {
                     connection.query(sql, values, function(err, result) {
                         connection.release();

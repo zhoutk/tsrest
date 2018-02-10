@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/zhoutk/tsrest#readme",
   "dependencies": {
-    "mysql": "^2.15.0"
+    "mysql": "^2.15.0",
+    "tracer": "^0.8.11"
   },
   "devDependencies": {
     "@types/chai": "^4.1.2",
